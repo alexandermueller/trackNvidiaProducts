@@ -81,7 +81,7 @@ def prettyPrint(info):
 def printItemInfo(items, locale):
     if len(items) > 0:
         print
-        print '>' * 33 + ' Prices and stock for: ' + locale.split('_')[1].upper() + ' ' + '<' * 33
+    		print '>' * 26 + ' Prices and stock for: ' + locale.split('_')[1].upper() + ' ' + '<' * 26
         print '--> Products:'
         
         i    = 1
@@ -112,7 +112,7 @@ def printItemInfo(items, locale):
                 seen.append(item['sku'])
                 prices.append('%i %s' % (pricing['value'], pricing['currency']))
                 stocks.append(str(inventory['availableQuantity']))
-                avails.append(inventory['expectedInStockDate'])
+                avails.append(inventory['expectedInStockDate'].split('T')[0])
                 i += 1
 
         prettyPrint({priceKey : prices, stockKey : stocks, availKey : avails})
