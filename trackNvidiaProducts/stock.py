@@ -81,7 +81,7 @@ def prettyPrint(info):
 def printItemInfo(items, locale):
     if len(items) > 0:
         print
-    		print '>' * 26 + ' Prices and stock for: ' + locale.split('_')[1].upper() + ' ' + '<' * 26
+    	print '>' * 26 + ' Prices and stock for: ' + locale.split('_')[1].upper() + ' ' + '<' * 26
         print '--> Products:'
         
         i    = 1
